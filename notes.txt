@@ -1,0 +1,36 @@
+1. variables var & val
+    Setiap variable harus tenteukan tipe data
+    Val = tidak bisa di reassigned / memiliki sifat final
+    var = bisa di reassigned atau diubah value nya
+
+2. input dan output
+    Output :
+    output bisa menggunakan print/println, print tidak akan enter setiap value println sebaliknya
+
+    Input:
+    Input bisa menggunakan readline
+
+3. Operasi aritmarika
+    Untuk aritmatika kita harus deklarasikan tipe data
+    contoh jika hasil ingin memiliki koma maka bisa gunakan double atau lainya
+    atau bisa mengubah value contoh: val number = 5.2 (maka valuenya otomatis akan berubah ke double)
+
+4. If Else Statement
+    if digunakan untuk mengoperasikan tipe boolen
+    jika salah dijalankan apa dan jika benar dijalankan apa
+
+5. When expression
+    When sama dengan swith di bahasa pemrograman lain
+    contoh when :
+    val number = 2
+        val result = when (number){ //when bisa dimasukan kedalam variable
+            1 -> { //untuk value yang banyak bisa menggunakan {}
+                println("bernilai 1")
+                print("betul number 1")
+            }
+            2 -> "Bernilai 2" //bisa langsung ada nilainya
+            3 -> print("number bernilai 3")
+            else -> print("number tidak ada yang cocok") //wajib menambahkan else jika ada variable
+        }
+        println(result)
+

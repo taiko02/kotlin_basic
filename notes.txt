@@ -34,3 +34,92 @@
         }
         println(result)
 
+6. Tipe data null
+    Null tidak bisa dimasukan ke variable yang sifat tipe datanya adalah non null
+    null bisa diguankan sebelum tipe contoh :
+    val nama: String? = null
+    val inputNama = ReadLine()?.toInt()
+    Contoh check data null :
+    println("Masukan umur kamu : ")
+        val  inputNama = readLine()
+
+        if (inputNama.isNullOrEmpty()) {
+            print("Kamu tidak menginput data")
+        } else {
+            val umur = inputNama.toInt()
+            val ubah = umur + 1
+            print(ubah)
+        }
+
+7. Perulangan(looping)
+    contoh coding :
+    var index = 1
+
+        while (index > 11){
+            println("Kata Yang panjang")
+            index++
+        }
+
+        do {
+            println("Kata yang panjang") // ini akan tetap di eksekusi karna printnya tidak dalam while
+            index++
+        } while (index > 11)
+
+        for (i in 1 .. 10){ //bisa menggunakan .. atau until
+            println("kata yang panjang $i" )
+        }
+
+8. Fungsi
+    Function adalah suatu block code program yang digunakan untuk menggabungkan suatu baris kode
+    contoh coding :
+    import kotlin.random.Random
+    import kotlin.random.nextInt
+
+    fun main () {
+        val hasil = penjumlahan(number1 = 5, number2 = 2)
+        println(hasil)
+
+        val hasilKurang = pengurangan(number1 = 12, number2 = 2)
+        println(hasilKurang)
+    }
+
+    fun penjumlahan (number1: Int, number2: Int) : Int{ //function harus memiliki tipe data jika ingin return
+
+        val result = number1 + number2
+        return result //return untuk mengembalikan nilai
+    }
+
+    fun pengurangan (number1: Int, number2: Int) : Int{ //function harus memiliki tipe data jika ingin return
+
+        val result = number1 - number2
+        return result //return untuk mengembalikan nilai
+    }
+
+9.  Array, Lists, Set, & Map(Data collection)
+
+    Contoh coding :
+    val array: Array<Any>
+        array = arrayOf(2,3,4,5,"sasa",true)
+
+        val list: List<Any>
+        list = listOf(2,3,4,5,"sasa",true)
+
+        val set: Set<Any>
+        set = setOf(2,3,4,5,"sasa",true)
+
+        //Atau cara simple nya dibawah ini
+        val data = listOf<Any>("string",12,"mantap") //Tambahkan tipe data dalam <> untuk deklarisikan isi array
+
+        // Contoh Map
+    //    val data1:Map<String, String> //map harus dua tipe data <key, value>
+        val data1 = mapOf<String, Any>(
+            "a" to 12, //value harus sesuai dengan key dan value
+            "b" to "Banana"
+        )
+        println(data1.keys) //pemanggilan data bisa menggunakan getValue atau [](kurung siku)
+                            //atau values untuk tampilkan semua data
+                            //atau keys untuk melihat key apa saja dalam data
+
+    //    val union = data.union(data1) //union : menggabungkan data lalu mencari nilai yang sama
+    //    val union = data.intersect(data1) //intersect : hanya mencetak nilai yang sama
+    //    println(data1[1])

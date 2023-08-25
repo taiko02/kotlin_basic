@@ -1,24 +1,26 @@
 
 fun main(args: Array<String>) {
 
-    var nama: Array<String> = arrayOf("hilman","makssss","anto")
+    var harta = arrayOf("emas", "perak", "zonk")
 
-    // mengubah array menjadi list
-    println(nama.toList())
+    // contoh looping, .. spesial untuk kotlin menandakan <=
+    for (i in 5..10){
+        println("baris ke $i")
+    }
 
-    // cek panjang array
-    println(nama.size)
+    for (item in harta){
+        println("Yeay dapat : $item")
+    }
 
-    // memanggil salah satu data array
-    println(nama[2]) //anto
-    println(nama.get(1)) // bisa juga dengan get
+    // looping array menggunakan foreach
+    harta.forEach { hartas -> println("contoh foreach : $hartas") }
+    harta.forEachIndexed { index, hartas -> println("contoh foreach : $hartas index ke : $index") } // looping dan index
 
-    // ubah data array
-    nama[0] = "hilda"
-    println(nama[0]) //hilda
+    // contoh looping variable
+    var indeks: Int = 0
 
-    nama.set(0,"hildoss") // atau bisa seperti ini
-    println(nama[0]) //hildoss
-
-
+    for (i in 1..10){
+        indeks++
+        println("Counter ke $indeks")
+    }
 }

@@ -1,15 +1,9 @@
 fun main(args: Array<String>) {
-    // contoh input dari user
-    println("Masukan nama kamu")
-    var umurOrang: String = readln()
+//    deklarasi tipe data
+//    deklrasi variable bisa di tambahkan setelah :
+    val nama: String = "anto"
+//    ini akan error karna string tapi value integer
+//    val  alamat: String = 20
 
-    println("Masukan umur kamu")
-    val nama:Int = readln().toInt()
-
-    if (nama <= 20){
-        println("Maaf minimal 20 tahun")
-        return
-    }
-
-    println("Umur : $umurOrang Nama : $nama")
+    println("Nama : $nama")
 }

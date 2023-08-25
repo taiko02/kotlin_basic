@@ -1,9 +1,15 @@
 fun main(args: Array<String>) {
-    // val tidak bisa di assign/di ubah
-    val nama = "andik"
-    // var bisa di ubah atau di assign
-    var umur = 20
-    umur = 10
+    // contoh input dari user
+    println("Masukan nama kamu")
+    var umurOrang: String = readln()
 
-    println("Nama : $nama Umur : $umur")
+    println("Masukan umur kamu")
+    val nama:Int = readln().toInt()
+
+    if (nama <= 20){
+        println("Maaf minimal 20 tahun")
+        return
+    }
+
+    println("Umur : $umurOrang Nama : $nama")
 }
